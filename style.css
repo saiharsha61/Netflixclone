@@ -1,0 +1,123 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #111;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 90vh;
+  background: url('https://assets.nflxext.com/ffe/siteui/vlv3/242fe7f3-2c2f-466b-b441-bfa8f5be5977/41f41b0e-42c5-4a8f-8cc3-49c72055dc49/US-en-20240422-popsignuptwoweeks-perspective_alpha_website_large.jpg') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Navbar */
+.navbar {
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: relative;
+}
+.logo {
+  width: 120px;
+}
+.signin-btn {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Hero Content */
+.hero-content {
+  z-index: 10;
+  text-align: center;
+  margin-bottom: 100px;
+  padding: 0 20px;
+  position: relative;
+}
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.hero-content h2 {
+  font-weight: normal;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+.hero-content p {
+  margin-bottom: 20px;
+}
+.email-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.email-form input {
+  padding: 10px;
+  width: 300px;
+  max-width: 100%;
+  border: none;
+  border-radius: 2px;
+}
+.email-form button {
+  background-color: #e50914;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Movie Rows */
+.row {
+  margin: 40px 20px;
+}
+.row h2 {
+  margin-bottom: 10px;
+}
+.row-posters {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+}
+.row-posters::-webkit-scrollbar {
+  display: none;
+}
+.poster {
+  width: 200px;
+  transition: transform 0.3s;
+  border-radius: 4px;
+}
+.poster:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content h2 {
+    font-size: 1.2rem;
+  }
+}
